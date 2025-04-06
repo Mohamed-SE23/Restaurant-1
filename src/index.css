@@ -1,3 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #F4A62A;
+    --color-secondary: #2C2C2C;
+    --color-tertiary: #6E6E6E;
+    --color-forth: #F8F8F8;
+}
+
+.btn {
+    @apply text-primary border-2 border-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-200
+}
