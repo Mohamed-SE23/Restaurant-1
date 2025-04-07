@@ -1,5 +1,5 @@
 import { IconType } from "react-icons/lib";
-import { bread, cake, chicken, client1, desserts, drinks, main1, main2, pastas, pizza, pizzas, salad, salmon, sides, smoothie, spaghetti, stars } from "../assets";
+import { bread, cake, chicken, desserts, drinks, main1, main2, pastas, pizza, pizzas, salad, salmon, sides, smoothie, spaghetti, stars } from "../assets";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
@@ -120,7 +120,6 @@ export const gallery: galleryType[] = [
 
 // testimonials
 export interface testimonialsType {
-  authImg: string;
   authName: string;
   authJob: string;
   stars: string;
@@ -130,21 +129,18 @@ export interface testimonialsType {
 export const testimonials: testimonialsType[] = [
   {
     stars: stars,
-    authImg: client1,
     authName: "Emily R.",
     authJob: "Food Blogger",
     text: "“ An absolute delight! The ambiance is perfect, and the food is simply outstanding. Every dish is crafted with perfection, and the service is top-notch. Highly recommended! ”"
   },
   {
     stars: stars,
-    authImg: client1,
     authName: "James M.",
     authJob: "Frequent Diner",
     text: "“ From the warm welcome to the last bite, everything was exceptional. The flavors, presentation, and atmosphere make this my go-to restaurant! ”"
   },
   {
     stars: stars,
-    authImg: client1,
     authName: "Sophia L.",
     authJob: "First-Time Visitor",
     text: "“ I was blown away by the quality and taste of the dishes! The staff was incredibly friendly, and the experience was unforgettable. I’ll definitely be back! ”"

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { textVariant } from "../../utils/motion";
-import { cover3 } from "../../assets";
+// import { cover3 } from "../../assets";
 import { useState } from "react";
 import StarWrapper from "../../hoc/SectionWrapper";
 
@@ -27,7 +27,8 @@ const Reservation = () => {
     <div>
       <div
         className="w-full bg-cover bg-center mt-40"
-        style={{ backgroundImage: `url(${cover3})` }}
+        // style={{ backgroundImage: `url(${cover3})` }}
+        style={{ backgroundImage: `url(https://imgur.com/7V77Olr)` }}
       >
         <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70 `}>
           <motion.div

@@ -2,8 +2,6 @@ import restaurant from "./restaurant.jpg";
 import logo from "./logo.svg"
 import map from "./map.jpg"
 import stars from "./stars.svg"
-import close from "./close.svg"
-import menu from "./menu.svg"
 
 import desserts from "./gallery/desserts.jpg"
 import drinks from "./gallery/drinks.jpg"
@@ -22,20 +20,16 @@ import salad from "./menu/salad.jpg"
 import salmon from "./menu/salmon.jpg"
 import smoothie from "./menu/smoothie.jpg"
 import spaghetti from "./menu/spaghetti.jpg"
-import client1 from "./client1.jpg"
 import heroCard from "./heroCard.webp"
 import cover3 from "./cover3.webp"
 
 export {
   cover3,
   heroCard,
-  client1,
   restaurant,
   logo,
   map,
   stars,
-  close,
-  menu,
   desserts,
   drinks,
   fruits,
