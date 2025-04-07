@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, navLinks } from "../../data";
+import { navItems, NavType } from "../../data";
 import { Link } from "react-router-dom";
 
 const Hamburger = () => {
@@ -29,7 +29,7 @@ const Hamburger = () => {
           <ul
             className={`${checked ? "absolute top-14 right-6 sm:right-8 flex flex-col gap-4 p-6 bg-secondary text-forth shadow-lg rounded-md": "hidden"}`}
           >
-            {navLinks.map((nav: NavLink, i:number) => {
+            {navItems.map((nav: NavType, i:number) => {
               return <li 
                 key={i}
                 onClick={() => setActive(nav.id)}
