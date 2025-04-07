@@ -5,16 +5,16 @@ import { IoMdMail } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { CiGlobe } from "react-icons/ci";
 
-export interface NavLink {
+export interface NavType {
   id: string;
   title: string;
 }
 
-export const navLinks: NavLink[] = [
+export const navItems: NavType[] = [
   { id: "menu", title: "Menu" },
-  { id: "gallery", title: "Gallery" },
-  { id: "testimonials", title: "Testimonials" },
-  { id: "reservation", title: "Reservation" },
+  { id: "gallery", title: "gallery" },
+  { id: "testimonials", title: "testimonials" },
+  { id: "reservation", title: "reservation" },
   { id: "contact", title: "contact" },
 ];
 

@@ -2,6 +2,7 @@ import {motion} from "framer-motion";
 import { textVariant } from "../../utils/motion";
 import { testimonials, testimonialsType } from "../../data";
 import { styles } from "../../styles";
+import StarWrapper from "../../hoc/SectionWrapper";
 const Testimonials = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Testimonials = () => {
       <div className={`${styles.paddingX} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 mt-10 `}>
         {testimonials.map((test: testimonialsType, i: number) => {
           return  (
-          <figure key={i} className="w-full mx-auto shadow-xl rounded-md p-6">
+          <figure key={i} className="w-full h-full mx-auto flex flex-col items-start justify-between shadow-xl rounded-md p-6">
             <svg className="w-10 h-10 mx-auto mb-3 text-gray-400 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
                 <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
             </svg>
@@ -44,4 +45,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default StarWrapper(Testimonials, "testimonials");

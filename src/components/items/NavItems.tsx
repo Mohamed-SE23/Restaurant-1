@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { navLinks, NavLink } from "../../data";
+import { navItems, NavType } from "../../data";
 import { useState } from "react";
 
 const NavItems = () => {
@@ -7,7 +6,7 @@ const NavItems = () => {
 
   return (
     <ul className="hidden sm:flex sm:items-center sm:gap-4">
-      {navLinks.map((nav: NavLink, i:number) => {
+      {navItems.map((nav: NavType, i:number) => {
         return <li 
             key={i}
             onClick={() => setActive(nav.id)}

@@ -3,6 +3,7 @@ import { styles } from "../../styles";
 import { textVariant } from "../../utils/motion";
 import { cover3 } from "../../assets";
 import { useState } from "react";
+import StarWrapper from "../../hoc/SectionWrapper";
 
 const Reservation = () => {
   const [formData, setFormData] = useState({
@@ -90,4 +91,4 @@ const Reservation = () => {
   );
 };
 
-export default Reservation;
+export default StarWrapper(Reservation, "reservation");

@@ -1,8 +1,9 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { restaurant } from "../../assets"
-import { textVariant } from "../../utils/motion";
+import { textVariant, zoomIn } from "../../utils/motion";
 import { styles } from "../../styles";
 import { gallery } from "../../data";
+import StarWrapper from "../../hoc/SectionWrapper";
 
 const Gallery = () => {
 
@@ -11,7 +12,7 @@ const Gallery = () => {
     className="w-full bg-cover bg-center"
     style={{ backgroundImage: `url(${restaurant})` }}
   >
-    <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70 `}>
+    <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70`}>
     <motion.div
         variants={textVariant()}
        className="text-center text-forth mb-12">
@@ -23,6 +24,7 @@ const Gallery = () => {
       {gallery.map((image, i:number) => (
           <motion.div
             key={i}
+            variants={zoomIn(0.5, 0.3)}
             whileHover={{ scale: 1.05 }}
             className="relative cursor-pointer overflow-hidden rounded-xl shadow-lg"
           >
@@ -42,4 +44,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery;
+export default StarWrapper(Gallery, "gallery");
