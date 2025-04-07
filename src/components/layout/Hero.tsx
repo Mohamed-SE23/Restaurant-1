@@ -1,11 +1,11 @@
 import { FaClock, FaLocationDot } from "react-icons/fa6";
-import { heroCard, mainCover, pizza, restaurant, stars } from "../../assets";
+import { fruits, heroCard, pizza, stars } from "../../assets";
 import { styles } from "../../styles";
 
 const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden hero-section">
-      {/* Video Background */}
+      {/* Video Background
       <video
         autoPlay
         muted
@@ -15,12 +15,12 @@ const Hero = () => {
       >
         <source src={mainCover} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
       {/* Fallback Image */}
       <div
-        className="absolute inset-0 w-full h-full hidden bg-cover bg-center mobile-fallback"
-        style={{ backgroundImage: `url(${restaurant})` }}
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${fruits})` }}
       ></div>
 
       {/* Dark Overlay */}

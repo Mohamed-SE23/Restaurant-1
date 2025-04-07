@@ -31,6 +31,7 @@ const Gallery = () => {
             <img
               src={image.img}
               alt={image.alt}
+              loading="lazy"
               className="w-full h-48 object-cover transition-all duration-300"
             />
             <div className="absolute inset-0 bg-black/70 flex justify-center items-center opacity-0 hover:opacity-100 transition-all duration-300">

@@ -23,7 +23,7 @@ const Contact = () => {
         <motion.div
         variants={slideIn("right", "tween", 1, 0.3)}
         className="w-full lg:w-1/2">
-          <img src={map} alt="map" className="w-full h-60 lg:h-fit rounded-md object-cover " />
+          <img src={map} alt="map" loading="lazy" className="w-full h-60 lg:h-fit rounded-md object-cover " />
         </motion.div>
         <motion.div 
           variants={slideIn("left", "tween", 1, 0.3)}

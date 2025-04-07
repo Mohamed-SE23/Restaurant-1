@@ -31,7 +31,7 @@ const Testimonials = () => {
                 <p className="text-2xl italic font-medium text-gray-900 ">{test.text}</p>
             </blockquote>
             <figcaption className="flex items-center justify-center mt-6 space-x-3 ">
-                <img className="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" />
+                <img className="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" loading="lazy" />
                 <div className="flex items-center divide-x-2  divide-gray-500 ">
                     <cite className="pe-3 font-medium text-gray-900 ">{test.authName}</cite>
                     <cite className="ps-3 text-sm text-gray-500 ">{test.authJob}</cite>

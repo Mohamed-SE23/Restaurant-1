@@ -24,8 +24,8 @@ import salmon from "./menu/salmon.jpg"
 import smoothie from "./menu/smoothie.jpg"
 import spaghetti from "./menu/spaghetti.jpg"
 import client1 from "./client1.jpg"
-import heroCard from "./heroCard.jpg"
-import cover3 from "./cover3.jpg"
+import heroCard from "./heroCard.webp"
+import cover3 from "./cover3.webp"
 
 export {
   cover3,

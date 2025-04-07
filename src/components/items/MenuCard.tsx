@@ -10,7 +10,7 @@ const MenuCard: React.FC<T> = ({menu, index}) => {
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       className="group bg-white flex flex-col justify-between items-start rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-      <img src={menu.img} alt={menu.title} className="w-full h-44 object-cover rounded-md" />
+      <img src={menu.img} alt={menu.title} loading="lazy" className="w-full h-44 object-cover rounded-md" />
       <div className="p-4 w-full">
         <div className="flex items-center justify-between gap-2">
             <h3 className="text-xl font-semibold">{menu.title}</h3>
