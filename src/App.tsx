@@ -4,19 +4,15 @@ import { Contact, Gallery, Hero, Menu, Navbar, Reservation, Testimonials } from 
 const App = () => {
 
   return (
-    <>
-      <Router>
-        <div>
-          <Navbar />
-          <Hero />
-          <Menu />
-          <Gallery />
-          <Testimonials />
-          <Reservation />
-          <Contact />
-        </div>
-      </Router>
-    </>
+    <Router>
+      <Navbar />
+      <Hero />
+      <Menu />
+      <Gallery />
+      <Testimonials />
+      <Reservation />
+      <Contact />
+    </Router>
   )
 }
 

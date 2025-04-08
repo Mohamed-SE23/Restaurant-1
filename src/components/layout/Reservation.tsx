@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
-import { textVariant } from "../../utils/motion";
-// import { cover3 } from "../../assets";
+import { textVariant, zoomIn } from "../../utils/motion";
+import { cover3 } from "../../assets";
 import { useState } from "react";
 import StarWrapper from "../../hoc/SectionWrapper";
 
@@ -27,8 +27,7 @@ const Reservation = () => {
     <div>
       <div
         className="w-full bg-cover bg-center mt-40"
-        // style={{ backgroundImage: `url(${cover3})` }}
-        style={{ backgroundImage: `url(https://imgur.com/7V77Olr)` }}
+        style={{ backgroundImage: `url(${cover3})` }}
       >
         <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70 `}>
           <motion.div
@@ -42,7 +41,10 @@ const Reservation = () => {
              Reserve your spot for an unforgettable dining experience.
             </p>
           </motion.div>
-          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto flex flex-col justify-center text-forth gap-4">
+          <motion.form 
+            onSubmit={handleSubmit} 
+            variants={zoomIn(0.5, 0.3)}
+            className="max-w-2xl mx-auto flex flex-col justify-center text-forth gap-4">
             <input 
               type="name"
               value={formData.name}
@@ -85,7 +87,7 @@ const Reservation = () => {
         <button type="submit" className="w-full border-2 border-primary  rounded-md text-primary py-3 cursor-pointer hover:bg-primary hover:text-white transition">
           Reserve Now
         </button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </div>

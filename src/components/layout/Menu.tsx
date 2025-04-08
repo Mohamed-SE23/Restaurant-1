@@ -6,6 +6,7 @@ import MenuCard from "../items/MenuCard";
 import { styles } from "../../styles";
 
 const Menu = () => {
+
   return (
     <div
     className={`${styles.padding} max-w-7xl mx-auto relative z-0`}>

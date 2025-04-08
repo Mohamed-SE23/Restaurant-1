@@ -27,7 +27,7 @@ const Contact = () => {
         </motion.div>
         <motion.div 
           variants={slideIn("left", "tween", 1, 0.3)}
-          className="w-full lg:w-1/2 flex flex-col gap-4 text-lg">
+          className="w-full lg:w-1/2 flex flex-col gap-4 text-sm sm:text-lg">
           {contact.map((item: contactType, i:number) => {
             return (
               <div
