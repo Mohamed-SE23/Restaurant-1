@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
-import { textVariant } from "../../utils/motion";
+import { textVariant, zoomIn } from "../../utils/motion";
 import { testimonials, testimonialsType } from "../../data";
 import { styles } from "../../styles";
 import StarWrapper from "../../hoc/SectionWrapper";
@@ -23,7 +23,9 @@ const Testimonials = () => {
         </p>
       </motion.div>
       {/* <div className={`${styles.paddingX} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 mt-10 `}> */}
-      <div className={`${styles.paddingX} max-w-5xl mx-auto mt-10 `}>
+      <motion.div 
+        variants={zoomIn(1.3, 0.4)}
+        className={`${styles.paddingX} max-w-5xl mx-auto mt-10 `}>
       <Splide 
           hasTrack={ false } 
           aria-label="Testimonials"
@@ -35,6 +37,9 @@ const Testimonials = () => {
             pauseOnHover: true,
             arrows: true,
             pagination: true,
+            resetProgress: false,
+            focus: 'center', // or remove 'focus' entirely
+            autoScroll: false, 
             gap: '1rem',
           }}>
         <SplideTrack>
@@ -66,7 +71,7 @@ const Testimonials = () => {
           <button className="splide__arrow splide__arrow--next translate-x-8"><FaArrowRight /></button>
         </div>
       </Splide>
-      </div>
+      </motion.div>
     </div>
     </>
   )
