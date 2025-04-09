@@ -10,7 +10,7 @@ const NavItems = () => {
         return <li 
             key={i}
             onClick={() => setActive(nav.id)}
-            className={`text-lg transition duration-300 ease-in ${active === nav.id ? 'text-primary': ''}`}>
+            className={`text-lg transition duration-300 ease-in hover:text-primary ${active === nav.id ? 'text-primary': ''}`}>
                 <a href={`#${nav.id}`}>
                  {nav.title}
                 </a>
