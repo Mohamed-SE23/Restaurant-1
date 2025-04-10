@@ -11,11 +11,11 @@ const Testimonials = () => {
       <span className='hash-span' id="#testimonials">
         &nbsp;
       </span>
-    <div>
+    <div className="my-20">
       <motion.div
         variants={textVariant()}
        className="text-center">
-        <h1 className="text-4xl text-secondary font-bold mt-20">
+        <h1 className="text-4xl text-secondary font-bold">
           Testimonials
         </h1>
         <p className="uppercase">

@@ -34,7 +34,7 @@ const BackToTop = () => {
         <button 
         type="button"
         onClick={handleClick}
-        className="fixed bottom-4 right-4 p-3 bg-primary text-forth rounded-full shadow-lg shadow-primary animate-bounce">
+        className="fixed bottom-4 right-4 p-3 bg-primary text-forth rounded-full shadow-lg shadow-primary animate-bounce cursor-pointer">
       <FaArrowUp className="w-4 h-4 sm:w-6 sm:h-6"/>
     </button>
     }

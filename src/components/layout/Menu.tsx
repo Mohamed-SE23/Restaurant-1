@@ -13,7 +13,7 @@ const Menu = () => {
       <motion.div
         variants={textVariant()}
        className="text-center">
-        <h1 className="text-4xl text-secondary font-bold mt-20">
+        <h1 className="text-4xl text-secondary font-bold mt-8">
           Our Menu
         </h1>
         <p className="uppercase">

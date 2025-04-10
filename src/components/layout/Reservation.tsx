@@ -26,7 +26,7 @@ const Reservation = () => {
   return (
     <div>
       <div
-        className="w-full bg-cover bg-center mt-40"
+        className="w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${cover3})` }}
       >
         <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70 `}>
@@ -43,7 +43,7 @@ const Reservation = () => {
           </motion.div>
           <motion.form 
             onSubmit={handleSubmit} 
-            variants={zoomIn(0.5, 0.3)}
+            variants={zoomIn(1, 0.3)}
             className="max-w-2xl mx-auto flex flex-col justify-center text-forth gap-4">
             <input 
               type="name"

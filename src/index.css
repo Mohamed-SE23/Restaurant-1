@@ -16,5 +16,5 @@
 }
 
 .btn {
-    @apply text-primary border-2 border-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-200
+    @apply text-primary border-2 border-primary rounded-full font-semibold cursor-pointer hover:bg-primary hover:text-white active:bg-primary active:text-white transition-all duration-200
 }
