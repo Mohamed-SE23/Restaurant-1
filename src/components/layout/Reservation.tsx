@@ -32,7 +32,7 @@ const Reservation = () => {
         <div className={`${styles.paddingX} ${styles.paddingY} bg-black/70 `}>
           <motion.div
             variants={textVariant()}
-            className="text-center text-forth mb-12"
+            className="text-center text-forth my-12"
           >
             <h1 className="text-4xl font-bold">
               Reservation

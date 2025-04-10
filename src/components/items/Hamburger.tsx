@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { navItems, NavType } from "../../data";
-import { Link } from "react-router-dom";
 
 const Hamburger = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [active, setActive] = useState<string>("")
+
+  // handle click to set checked value
+  const handleClick = (str: string) => {
+    setChecked(!checked);
+    setActive(str);
+  }
 
   return (
       <label>
@@ -27,16 +32,16 @@ const Hamburger = () => {
           ></div>
         </div>
           <ul
-            className={`${checked ? "absolute top-14 right-6 sm:right-8 flex flex-col gap-4 p-6 bg-secondary text-forth shadow-lg rounded-md": "hidden"}`}
+            className={`${checked ? "absolute top-14 right-6 sm:hidden flex flex-col gap-4 p-6 bg-secondary text-forth shadow-lg rounded-md": "hidden"}`}
           >
             {navItems.map((nav: NavType, i:number) => {
               return <li 
                 key={i}
-                onClick={() => setActive(nav.id)}
-                className={`text-lg transition-all duration-100 ease-in ${active === nav.id ? 'text-primary border-b-2 border-primary': ''}`}>
-                    <Link to={`#${nav.id}`}>
-                    {nav.title}
-                    </Link>
+                onClick={() => handleClick(nav.id)}
+                className={`text-lg transition-all duration-100 ease-in ${active === nav.id ? 'text-primary': ''}`}>
+                  <a href={`#${nav.id}`}>
+                   {nav.title}
+                  </a>
             </li>
           })}
           </ul>
