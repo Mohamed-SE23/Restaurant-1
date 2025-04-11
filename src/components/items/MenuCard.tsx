@@ -10,7 +10,7 @@ interface T {
 const MenuCard: React.FC<T> = ({ menu, index }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("up", "tween", index * 0.4, 0.2)}
       className="group bg-white flex flex-col rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full"
     >
       <img
