@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { slideIn, textVariant } from "../../utils/motion"
+import { textVariant, zoomIn } from "../../utils/motion"
 import { map } from "../../assets"
 import { contact, contactType } from "../../data"
 import StarWrapper from "../../hoc/SectionWrapper"
@@ -21,12 +21,12 @@ const Contact = () => {
       {/* contact info */}
       <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-8 lg:gap-20 mb-20">
         <motion.div
-        variants={slideIn("right", "tween", 1, 0.3)}
+        variants={zoomIn( 1, 0.3)}
         className="w-full lg:w-1/2">
           <img src={map} alt="map" loading="lazy" className="w-full h-60 lg:h-fit rounded-md object-cover " />
         </motion.div>
         <motion.div 
-          variants={slideIn("left", "tween", 1, 0.3)}
+          variants={zoomIn( 1, 0.3)}
           className="w-full lg:w-1/2 flex flex-col gap-4 text-sm sm:text-lg">
           {contact.map((item: contactType, i:number) => {
             return (
