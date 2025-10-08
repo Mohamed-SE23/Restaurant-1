@@ -21,7 +21,7 @@ const Contact = () => {
       {/* contact info */}
       <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-8 lg:gap-20 mb-20">
         <motion.div
-        variants={zoomIn( 1, 0.3)}
+        variants={zoomIn( 1, 0.6)}
         className="w-full lg:w-1/2">
           <img src={map} alt="map" loading="lazy" className="w-full h-60 lg:h-fit rounded-md object-cover " />
         </motion.div>

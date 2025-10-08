@@ -24,7 +24,7 @@ const Gallery = () => {
       {gallery.map((image, i:number) => (
           <motion.div
             key={i}
-            variants={zoomIn(1, 0.3)}
+            variants={zoomIn(0.6, 0.8)}
             whileHover={{ scale: 1.05 }}
             className="relative cursor-pointer overflow-hidden rounded-xl shadow-lg"
           >
