@@ -9,7 +9,7 @@ import fruits from "./gallery/fruits.jpg"
 import main1 from "./gallery/main1.jpg"
 import main2 from "./gallery/main2.jpg"
 import pastas from "./gallery/pastas.jpg"
-import pizzas from "./gallery/pizzas.png"
+import pizzas from "./gallery/pizzas.jpg"
 import sides from "./gallery/sides.jpg"
 
 import bread from "./menu/bread.jpg"
