@@ -23,5 +23,5 @@ export const styles = {
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       width: "100%",
-      hight: "100%",
+      height: "100%",
     };
