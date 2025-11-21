@@ -1,33 +1,18 @@
 import { FaClock, FaLocationDot } from "react-icons/fa6";
 import { fruits, heroCard, pizza, stars } from "../../assets";
-import { styles } from "../../styles";
+
+const bgStyle = { backgroundImage: `linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(${fruits})` }
 
 const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden hero-section">
-      {/* Video Background
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={mainCover} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-
-      {/* Fallback Image */}
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${fruits})` }}
-      ></div>
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+        className="absolute inset-0 bg-cover bg-center"
+        style={bgStyle}
+      />
 
       {/* Content */}
-      <div className={`relative h-screen mt-10 flex flex-col justify-center items-center gap-8 overflow-hidden z-10 ${styles.paddingX}`}>
+      <div className={`relative h-full mt-10 flex flex-col justify-center items-center sm:px-16 px-6 gap-8 overflow-hidden z-10`}>
       <div
         className={`flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10 text-forth`}
       >
@@ -47,23 +32,23 @@ const Hero = () => {
         </div>
 
         {/* Images Section */}
-        <div className="lg:grid lg:grid-cols-2 gap-4 w-full hidden">
-          <img
-            src={pizza}
-            alt="card1"
-            loading="lazy"
-            className="w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-md object-cover"
-          />
-          <img
-            src={heroCard}
-            alt="card2"
-            loading="lazy"
-            className="w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-md object-cover"
-          />
-        </div>
+        {window.innerWidth >= 1024 && (
+          <div className="lg:grid lg:grid-cols-2 gap-4 w-full1`````">
+            <img
+              src={pizza}
+              alt="card1"
+              className="w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-md object-cover"
+            />
+            <img
+              src={heroCard}
+              alt="card2"
+              className="w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-md object-cover"
+            />
+          </div>
+        )}
       </div>
       <div className="border-t-3 mt-12 pt-8 flex items-center justify-center gap-4 sm:gap-6 border-primary w-full text-xl z-50">
-        <img src={stars} alt="stars" loading="lazy" className="w-22 sm:w-28" />
+        <img src={stars} alt="stars" className="w-22 sm:w-28" />
         <div className="flex items-center gap-1 text-forth text-sm sm:text-lg">
           <FaClock className="w-4 h-4 sm:w-6 sm:h-6" />
           <span>24h/day</span>

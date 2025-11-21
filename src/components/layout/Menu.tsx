@@ -24,6 +24,7 @@ const Menu = () => {
         {
           menu.map((menu: menuType, index:number) => {
             return <MenuCard 
+                key={index}
                 index={index}
                 menu={menu} />
           })
