@@ -1,3 +1,4 @@
+import React from "react";
 import { menuType } from "../../data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
@@ -8,15 +9,19 @@ interface T {
 }
 
 const MenuCard: React.FC<T> = ({ menu, index }) => {
+  const variants = fadeIn("up", "tween", 0, 0.1)
   return (
     <motion.div
-      variants={fadeIn("up", "tween", index * 0.2, 0.1)}
+      custom={index}
+      variants={variants}
       className="group bg-white flex flex-col rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 h-full"
     >
       <img
         src={menu.img}
         alt={menu.title}
         loading="lazy"
+        width="300"
+        height="200"
         className="w-full h-44 object-cover rounded-t-md"
       />
       {/* Card content with flex to push button down */}
@@ -38,4 +43,4 @@ const MenuCard: React.FC<T> = ({ menu, index }) => {
   );
 };
 
-export default MenuCard;
+export default React.memo(MenuCard);
